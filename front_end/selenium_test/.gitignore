@@ -1,0 +1,7 @@
+tmp
+config_test.ini
+
+**/__pycache__
+
+.idea
+.vscode

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  front_end:
+    image: front_end:v1.0.1
+    build: front_end
+    ports:
+      - "5173:5173"
+  back_end:
+    image: back_end:v1.0.8
+    build: back_end
+    ports:
+      - "5000:5000"
+  fuzz_test:
+    image: fuzz_test:v1.0.4
+    build: fuzz_test

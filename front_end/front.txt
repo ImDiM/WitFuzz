@@ -1,0 +1,41 @@
+.
+├── Dockerfile
+├── README.md
+├── index.html
+├── nginx
+│   └── default.conf
+├── package-lock.json
+├── package.json
+├── public
+│   ├── bug1.png
+│   ├── bug2.png
+│   ├── logo.png
+│   └── logo.svg
+├── src
+│   ├── App.vue
+│   ├── api
+│   │   ├── UserAPI.js
+│   │   └── request.js
+│   ├── assets
+│   │   └── vue.svg
+│   ├── components
+│   │   ├── Footer.vue
+│   │   ├── Forum
+│   │   │   └── Forum.vue
+│   │   ├── FuzzTask
+│   │   │   └── FuzzTask.vue
+│   │   ├── Header.vue
+│   │   ├── Home
+│   │   │   └── Home.vue
+│   │   ├── MainLayout.vue
+│   │   ├── MainPage.vue
+│   │   ├── Sider.vue
+│   │   └── User
+│   │       ├── Login.vue
+│   │       └── Register.vue
+│   ├── main.js
+│   └── router
+│       └── index.js
+└── vite.config.js
+
+11 directories, 28 files
