@@ -8,10 +8,10 @@
         <span class="answer-date">Answer NO.:{{ problem.answer_number }}</span>
         <div v-if="problem.user_id == user" class="del-btn">
           <router-link :to="`/forum/editProblem`">
-            <button type="submit" @click="addProblemToken()">Edit</button>
+            <button class = "edit"  type="submit" @click="addProblemToken()">Edit</button>
           </router-link>
           <router-link :to="`/forum`">
-            <button type="submit" @click="deleteProblem(problem.id)">Delete</button>
+            <button class = "delete"  type="submit" @click="deleteProblem(problem.id)">Delete</button>
           </router-link>
         </div>
         <div v-else class="del-btn"></div>
@@ -27,9 +27,11 @@
           <span class="answer-date">Edit Time:{{ answer.edit_time }}</span>
           <div v-if="answer.user_id == user" class="del-btn">
             <router-link :to="`/forum/editAnswer`">
-              <button type="submit" @click="addAnswerToken(answer.id)">Edit</button>
+              <button class = "edit" type="submit" @click="addAnswerToken(answer.id)">Edit</button>
             </router-link>
-            <button type="submit" @click="deleteAnswer(answer.id)">Delete</button>
+            <router-link :to="`/forum`">
+              <button class = "delete" type="submit" @click="deleteAnswer(answer.id)">Delete</button>
+              </router-link>
           </div>
           <div v-else class="del-btn">
           </div>
@@ -209,5 +211,16 @@ button[type="submit"]:hover {
   color: #2c3e50;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+.edit,
+.delete {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 50px;
 }
 </style>
